@@ -1,53 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20220827 00:50:46.789" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20220827 01:53:01.864" rpa="false" schemaversion="3">
 <suite id="s1" name="Amazon Testes" source="D:\carlo\Course\Robot FrameWork\Módulos\Módulo 03\RobotFramework\WebTesting\amazon_testes.robot">
 <test id="s1-t1" name="Caso de Teste 01 - Acesso ao menu &quot;Eletrônicos&quot;" line="9">
 <kw name="Abrir o navegador" library="amazon_resources" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220827 00:50:47.214" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220827 00:50:47.214" endtime="20220827 00:50:49.008"/>
+<msg timestamp="20220827 01:53:02.301" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220827 01:53:02.300" endtime="20220827 01:53:05.126"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220827 00:50:49.008" endtime="20220827 00:50:49.191"/>
+<status status="PASS" starttime="20220827 01:53:05.126" endtime="20220827 01:53:05.289"/>
 </kw>
-<status status="PASS" starttime="20220827 00:50:47.213" endtime="20220827 00:50:49.192"/>
+<status status="PASS" starttime="20220827 01:53:02.300" endtime="20220827 01:53:05.290"/>
 </kw>
 <kw name="Acessar a home page do site Amazon.com.br" library="amazon_resources">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>url=${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220827 00:50:49.194" level="INFO">Opening url 'http://www.amazon.com.br'</msg>
-<status status="PASS" starttime="20220827 00:50:49.193" endtime="20220827 00:50:52.043"/>
+<msg timestamp="20220827 01:53:05.293" level="INFO">Opening url 'http://www.amazon.com.br'</msg>
+<status status="PASS" starttime="20220827 01:53:05.292" endtime="20220827 01:53:08.426"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>locator=${MENU_ELETRONICOS}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220827 00:50:52.044" endtime="20220827 00:50:52.170"/>
+<status status="PASS" starttime="20220827 01:53:08.426" endtime="20220827 01:53:08.598"/>
 </kw>
-<status status="PASS" starttime="20220827 00:50:49.193" endtime="20220827 00:50:52.171"/>
+<status status="PASS" starttime="20220827 01:53:05.291" endtime="20220827 01:53:08.598"/>
+</kw>
+<kw name="Verificar se o título da página fica &quot;Qualquer titulo&quot;" library="amazon_resources" sourcename="Verificar se o título da página fica &quot;${TITULO}&quot;">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>title=${TITULO}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220827 01:53:09.099" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220827 01:53:09.100" level="FAIL">Title should have been 'Qualquer titulo' but was 'Amazon.com.br | Tudo pra você, de A a Z.'.</msg>
+<status status="FAIL" starttime="20220827 01:53:08.600" endtime="20220827 01:53:09.104"/>
+</kw>
+<status status="FAIL" starttime="20220827 01:53:08.599" endtime="20220827 01:53:09.105"/>
+</kw>
+<kw name="Entrar no menu &quot;Eletrônicos&quot;" library="amazon_resources">
+<status status="NOT RUN" starttime="20220827 01:53:09.106" endtime="20220827 01:53:09.106"/>
+</kw>
+<kw name="Verificar se aparece a frase &quot;Eletrônicos e Tecnologia&quot;" library="amazon_resources" sourcename="Verificar se aparece a frase &quot;${FRASE}&quot;">
+<status status="NOT RUN" starttime="20220827 01:53:09.106" endtime="20220827 01:53:09.107"/>
+</kw>
+<kw name="Verificar se o título da página fica &quot;Eletrônicos e Tecnologia | Amazon.com.br&quot;" library="amazon_resources" sourcename="Verificar se o título da página fica &quot;${TITULO}&quot;">
+<status status="NOT RUN" starttime="20220827 01:53:09.107" endtime="20220827 01:53:09.107"/>
 </kw>
 <doc>Esse teste verifica o menu eletrônicos do site da Amazon.com.br
 e verifica a categoria Computadores e Informática</doc>
 <tag>categorias</tag>
 <tag>menus</tag>
-<status status="PASS" starttime="20220827 00:50:47.211" endtime="20220827 00:50:52.180"/>
+<status status="FAIL" starttime="20220827 01:53:02.298" endtime="20220827 01:53:09.109">Title should have been 'Qualquer titulo' but was 'Amazon.com.br | Tudo pra você, de A a Z.'.</status>
 </test>
 <doc>Essa suite testa o site da Amazon.com.br</doc>
-<status status="PASS" starttime="20220827 00:50:46.793" endtime="20220827 00:50:52.184"/>
+<status status="FAIL" starttime="20220827 01:53:01.869" endtime="20220827 01:53:09.110"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">categorias</stat>
-<stat pass="1" fail="0" skip="0">menus</stat>
+<stat pass="0" fail="1" skip="0">categorias</stat>
+<stat pass="0" fail="1" skip="0">menus</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Amazon Testes">Amazon Testes</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Amazon Testes">Amazon Testes</stat>
 </suite>
 </statistics>
 <errors>
