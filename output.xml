@@ -1,72 +1,231 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20220827 01:53:01.864" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20220829 20:29:25.079" rpa="false" schemaversion="3">
 <suite id="s1" name="Amazon Testes" source="D:\carlo\Course\Robot FrameWork\Módulos\Módulo 03\RobotFramework\WebTesting\amazon_testes.robot">
 <test id="s1-t1" name="Caso de Teste 01 - Acesso ao menu &quot;Eletrônicos&quot;" line="9">
 <kw name="Abrir o navegador" library="amazon_resources" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220827 01:53:02.301" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220827 01:53:02.300" endtime="20220827 01:53:05.126"/>
+<msg timestamp="20220829 20:29:25.523" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220829 20:29:25.522" endtime="20220829 20:29:27.531"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220827 01:53:05.126" endtime="20220827 01:53:05.289"/>
+<status status="PASS" starttime="20220829 20:29:27.532" endtime="20220829 20:29:27.736"/>
 </kw>
-<status status="PASS" starttime="20220827 01:53:02.300" endtime="20220827 01:53:05.290"/>
+<status status="PASS" starttime="20220829 20:29:25.520" endtime="20220829 20:29:27.737"/>
 </kw>
 <kw name="Acessar a home page do site Amazon.com.br" library="amazon_resources">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>url=${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220827 01:53:05.293" level="INFO">Opening url 'http://www.amazon.com.br'</msg>
-<status status="PASS" starttime="20220827 01:53:05.292" endtime="20220827 01:53:08.426"/>
+<msg timestamp="20220829 20:29:27.741" level="INFO">Opening url 'http://www.amazon.com.br'</msg>
+<status status="PASS" starttime="20220829 20:29:27.740" endtime="20220829 20:29:30.474"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>locator=${MENU_ELETRONICOS}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220827 01:53:08.426" endtime="20220827 01:53:08.598"/>
+<status status="PASS" starttime="20220829 20:29:30.474" endtime="20220829 20:29:30.588"/>
 </kw>
-<status status="PASS" starttime="20220827 01:53:05.291" endtime="20220827 01:53:08.598"/>
+<status status="PASS" starttime="20220829 20:29:27.739" endtime="20220829 20:29:30.588"/>
 </kw>
-<kw name="Verificar se o título da página fica &quot;Qualquer titulo&quot;" library="amazon_resources" sourcename="Verificar se o título da página fica &quot;${TITULO}&quot;">
+<kw name="Verificar se o título da página fica &quot;Amazon.com.br | Tudo pra você, de A a Z.&quot;" library="amazon_resources" sourcename="Verificar se o título da página fica &quot;${TITULO}&quot;">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>title=${TITULO}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220827 01:53:09.099" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20220827 01:53:09.100" level="FAIL">Title should have been 'Qualquer titulo' but was 'Amazon.com.br | Tudo pra você, de A a Z.'.</msg>
-<status status="FAIL" starttime="20220827 01:53:08.600" endtime="20220827 01:53:09.104"/>
+<msg timestamp="20220829 20:29:30.602" level="INFO">Page title is 'Amazon.com.br | Tudo pra você, de A a Z.'.</msg>
+<status status="PASS" starttime="20220829 20:29:30.590" endtime="20220829 20:29:30.603"/>
 </kw>
-<status status="FAIL" starttime="20220827 01:53:08.599" endtime="20220827 01:53:09.105"/>
+<status status="PASS" starttime="20220829 20:29:30.589" endtime="20220829 20:29:30.603"/>
 </kw>
 <kw name="Entrar no menu &quot;Eletrônicos&quot;" library="amazon_resources">
-<status status="NOT RUN" starttime="20220827 01:53:09.106" endtime="20220827 01:53:09.106"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=${MENU_ELETRONICOS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220829 20:29:30.605" level="INFO">Clicking element '//a[@href='/Eletronicos-e-Tecnologia/b/?ie=UTF8&amp;node=16209062011&amp;ref_=nav_cs_electronics'][contains(.,'Eletrônicos')]'.</msg>
+<status status="PASS" starttime="20220829 20:29:30.604" endtime="20220829 20:29:34.314"/>
+</kw>
+<status status="PASS" starttime="20220829 20:29:30.604" endtime="20220829 20:29:34.315"/>
 </kw>
 <kw name="Verificar se aparece a frase &quot;Eletrônicos e Tecnologia&quot;" library="amazon_resources" sourcename="Verificar se aparece a frase &quot;${FRASE}&quot;">
-<status status="NOT RUN" starttime="20220827 01:53:09.106" endtime="20220827 01:53:09.107"/>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=${FRASE}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220829 20:29:34.316" endtime="20220829 20:29:34.567"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${HEADER_ELETRONICOS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220829 20:29:34.567" endtime="20220829 20:29:34.809"/>
+</kw>
+<status status="PASS" starttime="20220829 20:29:34.315" endtime="20220829 20:29:34.809"/>
 </kw>
 <kw name="Verificar se o título da página fica &quot;Eletrônicos e Tecnologia | Amazon.com.br&quot;" library="amazon_resources" sourcename="Verificar se o título da página fica &quot;${TITULO}&quot;">
-<status status="NOT RUN" starttime="20220827 01:53:09.107" endtime="20220827 01:53:09.107"/>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>title=${TITULO}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220829 20:29:34.894" level="INFO">Page title is 'Eletrônicos e Tecnologia | Amazon.com.br'.</msg>
+<status status="PASS" starttime="20220829 20:29:34.811" endtime="20220829 20:29:34.894"/>
+</kw>
+<status status="PASS" starttime="20220829 20:29:34.811" endtime="20220829 20:29:34.894"/>
+</kw>
+<kw name="Verificar se aparece a categoria &quot;Computadores e Informática&quot;" library="amazon_resources" sourcename="Verificar se aparece a categoria &quot;${NOME_CATEGORIA}&quot;">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//a[contains(@aria-label,'${NOME_CATEGORIA}')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220829 20:29:35.194" level="INFO">Element '//a[contains(@aria-label,'Computadores e Informática')]' is displayed.</msg>
+<status status="PASS" starttime="20220829 20:29:34.896" endtime="20220829 20:29:35.194"/>
+</kw>
+<status status="PASS" starttime="20220829 20:29:34.895" endtime="20220829 20:29:35.194"/>
+</kw>
+<kw name="Verificar se aparece a categoria &quot;Tablets&quot;" library="amazon_resources" sourcename="Verificar se aparece a categoria &quot;${NOME_CATEGORIA}&quot;">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>locator=//a[contains(@aria-label,'${NOME_CATEGORIA}')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220829 20:29:35.384" level="INFO">Element '//a[contains(@aria-label,'Tablets')]' is displayed.</msg>
+<status status="PASS" starttime="20220829 20:29:35.196" endtime="20220829 20:29:35.384"/>
+</kw>
+<status status="PASS" starttime="20220829 20:29:35.195" endtime="20220829 20:29:35.384"/>
+</kw>
+<kw name="Acessar formulário de Cadastro &quot;Olá, Faça seu login&quot;" library="amazon_resources" sourcename="Acessar formulário de Cadastro &quot;${CRIAR_CONTA}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//a[contains(.,'${CRIAR_CONTA}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220829 20:29:35.387" level="INFO">Clicking element '//a[contains(.,'Olá, Faça seu login')]'.</msg>
+<status status="PASS" starttime="20220829 20:29:35.386" endtime="20220829 20:29:36.646"/>
+</kw>
+<status status="PASS" starttime="20220829 20:29:35.385" endtime="20220829 20:29:36.646"/>
+</kw>
+<kw name="Acessar formulário de Cadastro &quot;Criar sua conta da Amazon&quot;" library="amazon_resources" sourcename="Acessar formulário de Cadastro &quot;${CRIAR_CONTA}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//a[contains(.,'${CRIAR_CONTA}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220829 20:29:36.650" level="INFO">Clicking element '//a[contains(.,'Criar sua conta da Amazon')]'.</msg>
+<status status="PASS" starttime="20220829 20:29:36.649" endtime="20220829 20:29:37.547"/>
+</kw>
+<status status="PASS" starttime="20220829 20:29:36.648" endtime="20220829 20:29:37.548"/>
+</kw>
+<kw name="Preencher campo &quot;Shemu'el&quot; no formulário de Cadastro Criando conta na Amazon" library="amazon_resources" sourcename="Preencher campo &quot;${NOME_USUARIO}&quot; no formulário de Cadastro Criando conta na Amazon">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=ap_customer_name</arg>
+<arg>text=Shemu'el</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220829 20:29:37.550" level="INFO">Typing text 'Shemu'el' into text field 'ap_customer_name'.</msg>
+<status status="PASS" starttime="20220829 20:29:37.550" endtime="20220829 20:29:37.729"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=ap_email</arg>
+<arg>text=shemuel@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220829 20:29:37.731" level="INFO">Typing text 'shemuel@gmail.com' into text field 'ap_email'.</msg>
+<status status="PASS" starttime="20220829 20:29:37.729" endtime="20220829 20:29:37.900"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=ap_password</arg>
+<arg>text=12345678</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220829 20:29:37.901" level="INFO">Typing text '12345678' into text field 'ap_password'.</msg>
+<status status="PASS" starttime="20220829 20:29:37.900" endtime="20220829 20:29:38.100"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=ap_password_check</arg>
+<arg>text=12345678</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220829 20:29:38.101" level="INFO">Typing text '12345678' into text field 'ap_password_check'.</msg>
+<status status="PASS" starttime="20220829 20:29:38.101" endtime="20220829 20:29:38.244"/>
+</kw>
+<status status="PASS" starttime="20220829 20:29:37.549" endtime="20220829 20:29:38.244"/>
+</kw>
+<kw name="Preencher campo &quot;12345678&quot; no formulário de Cadastro Criando conta na Amazon" library="amazon_resources" sourcename="Preencher campo &quot;${NOME_USUARIO}&quot; no formulário de Cadastro Criando conta na Amazon">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=ap_customer_name</arg>
+<arg>text=Shemu'el</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220829 20:29:38.247" level="INFO">Typing text 'Shemu'el' into text field 'ap_customer_name'.</msg>
+<status status="PASS" starttime="20220829 20:29:38.246" endtime="20220829 20:29:38.372"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=ap_email</arg>
+<arg>text=shemuel@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220829 20:29:38.373" level="INFO">Typing text 'shemuel@gmail.com' into text field 'ap_email'.</msg>
+<status status="PASS" starttime="20220829 20:29:38.372" endtime="20220829 20:29:38.553"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=ap_password</arg>
+<arg>text=12345678</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220829 20:29:38.554" level="INFO">Typing text '12345678' into text field 'ap_password'.</msg>
+<status status="PASS" starttime="20220829 20:29:38.554" endtime="20220829 20:29:38.685"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=ap_password_check</arg>
+<arg>text=12345678</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220829 20:29:38.685" level="INFO">Typing text '12345678' into text field 'ap_password_check'.</msg>
+<status status="PASS" starttime="20220829 20:29:38.685" endtime="20220829 20:29:38.805"/>
+</kw>
+<status status="PASS" starttime="20220829 20:29:38.245" endtime="20220829 20:29:38.805"/>
+</kw>
+<kw name="Preencher campo &quot;12345678&quot; no formulário de Cadastro Criando conta na Amazon" library="amazon_resources" sourcename="Preencher campo &quot;${NOME_USUARIO}&quot; no formulário de Cadastro Criando conta na Amazon">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=ap_customer_name</arg>
+<arg>text=Shemu'el</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220829 20:29:38.807" level="INFO">Typing text 'Shemu'el' into text field 'ap_customer_name'.</msg>
+<status status="PASS" starttime="20220829 20:29:38.806" endtime="20220829 20:29:38.916"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=ap_email</arg>
+<arg>text=shemuel@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220829 20:29:38.917" level="INFO">Typing text 'shemuel@gmail.com' into text field 'ap_email'.</msg>
+<status status="PASS" starttime="20220829 20:29:38.917" endtime="20220829 20:29:39.065"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=ap_password</arg>
+<arg>text=12345678</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220829 20:29:39.066" level="INFO">Typing text '12345678' into text field 'ap_password'.</msg>
+<status status="PASS" starttime="20220829 20:29:39.066" endtime="20220829 20:29:39.191"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=ap_password_check</arg>
+<arg>text=12345678</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220829 20:29:39.192" level="INFO">Typing text '12345678' into text field 'ap_password_check'.</msg>
+<status status="PASS" starttime="20220829 20:29:39.191" endtime="20220829 20:29:39.306"/>
+</kw>
+<status status="PASS" starttime="20220829 20:29:38.806" endtime="20220829 20:29:39.306"/>
+</kw>
+<kw name="Confirmando os &quot;dados preenchidos&quot; no cadastro realizado" library="amazon_resources">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>locator=continue</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220829 20:29:39.308" level="INFO">Clicking button 'continue'.</msg>
+<status status="PASS" starttime="20220829 20:29:39.308" endtime="20220829 20:29:39.988"/>
+</kw>
+<status status="PASS" starttime="20220829 20:29:39.307" endtime="20220829 20:29:39.988"/>
 </kw>
 <doc>Esse teste verifica o menu eletrônicos do site da Amazon.com.br
 e verifica a categoria Computadores e Informática</doc>
 <tag>categorias</tag>
 <tag>menus</tag>
-<status status="FAIL" starttime="20220827 01:53:02.298" endtime="20220827 01:53:09.109">Title should have been 'Qualquer titulo' but was 'Amazon.com.br | Tudo pra você, de A a Z.'.</status>
+<status status="PASS" starttime="20220829 20:29:25.517" endtime="20220829 20:29:39.989"/>
 </test>
 <doc>Essa suite testa o site da Amazon.com.br</doc>
-<status status="FAIL" starttime="20220827 01:53:01.869" endtime="20220827 01:53:09.110"/>
+<status status="PASS" starttime="20220829 20:29:25.083" endtime="20220829 20:29:39.991"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">categorias</stat>
-<stat pass="0" fail="1" skip="0">menus</stat>
+<stat pass="1" fail="0" skip="0">categorias</stat>
+<stat pass="1" fail="0" skip="0">menus</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Amazon Testes">Amazon Testes</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Amazon Testes">Amazon Testes</stat>
 </suite>
 </statistics>
 <errors>
