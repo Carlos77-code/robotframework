@@ -14,8 +14,8 @@ Abrir o navegador
     Maximize Browser Window
 
 
-Fechar o navegador
-    Close Browser
+# Fechar o navegador
+#     Close Browser
 
 Acessar a home page do site Amazon.com.br
     Go To    url=${URL}
@@ -40,22 +40,25 @@ Acessar menu de Cadastro "${CADATRO_USUARIO}"
 Acessar formulário de Cadastro "${CRIAR_CONTA}"
         Click Element    locator=//a[contains(.,'${CRIAR_CONTA}')]
 
-Preencher campo "${NOME_USUARIO}" no formulário de Cadastro Criando conta na Amazon
-        Input Text    locator=ap_customer_name    text=Shemu'el
-        Input Text    locator=ap_email            text=shemuel@gmail.com
-        Input Text    locator=ap_password         text=12345678
-        Input Text    locator=ap_password_check   text=12345678
-
+Preencher os campos no formulário "${REGISTRAR_USUARIO_NOVO}"
+        Input Text        locator=ap_customer_name      text=Shemu'el
+        Input Text        locator=ap_email              text=shemuel1@gmail.com
+        Input Password    locator=ap_password           password=12345678
+        Input Password    locator=ap_password_check     password=12345678
+        Click Button      locator=continue
 Confirmando os "dados preenchidos" no cadastro realizado
         Click Button    locator=continue
 
-# Digitar o nome de produto "${PRODUTO}" no campo de pesquisa
-#         Input Text    locator=twotabsearchtextbox    text=${PRODUTO}        
+Digitar o nome de produto "${PRODUTO}" no campo de pesquisa
+        Input Text    locator=twotabsearchtextbox    text=${PRODUTO}        
+        
+Clicar no botão de pesquisa
+        Click Element    locator=nav-search-submit-button
 
-# Clicar no botão de pesquisa
-#         Click Element    locator=nav-search-submit-button
+Verificar o resultado da pesquisa se está listando o produto "${PRODUTO}"
+    Wait Until Element Is Visible    locator=(//span[contains(.,'${PRODUTO}')])[2]
+    
 
-
-# Fechar o navegador
-#         Capture Page Screenshot
-#         Close Browser
+Fechar o navegador
+        Capture Page Screenshot
+        Close Browser
