@@ -34,8 +34,8 @@ Verificar se o título da página fica "${TITULO}"
 Verificar se aparece a categoria "${NOME_CATEGORIA}"
     Element Should Be Visible    locator=//a[contains(@aria-label,'${NOME_CATEGORIA}')]
 
-Acessar menu de Cadastro "${CADATRO_USUARIO}"
-        Click Element    locator=createAccountSubmit
+Acessar formulário de Cadastro "Olá, Faça seu login"
+        Click Element    locator=//span[contains(.,'Olá, faça seu login')]
 
 Acessar formulário de Cadastro "${CRIAR_CONTA}"
         Click Element    locator=//a[contains(.,'${CRIAR_CONTA}')]
@@ -89,3 +89,17 @@ Então o título da página deve ficar "Amazon.com.br : Xbox Series S"
 
 E um produto da linha "Xbox Series S" deve ser mostrado na página
     Verificar o resultado da pesquisa se está listando o produto "Console Xbox Series S"
+
+Adicionar o produto "Console Xbox Series S" no carrinho
+    Click Image    locator=//img[contains(@alt,'Console Xbox Series S')]
+    Click Button    locator=//input[contains(@name,'submit.add-to-cart')]
+
+Verificar se o produto "Console Xbox Series S" foi adicionado com sucesso
+    Wait Until Element Is Visible    locator=//span[contains(.,'Adicionado ao carrinho')]
+
+Remover o produto "Console Xbox Series S" do carrinho
+    Click Element    locator=//a[contains(.,'Ir para o carrinho')]
+    Click Element    locator=//input[contains(@value,'Excluir')]
+
+Verificar se o carrinho fica vazio
+    Wait Until Element Is Visible    locator=//h1[contains(.,'Seu carrinho de compras da Amazon está vazio.')]
