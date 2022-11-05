@@ -12,7 +12,7 @@ Resource                  ../auto/keywords/kws_cadastro.robot
 
 
 ##        Pages        ##
-Resource                  ../auto/pages/var_cadastro.robot
+Resource                  ../auto/variables/var_cadastro.robot
 
 
 ##        hooks        ##
